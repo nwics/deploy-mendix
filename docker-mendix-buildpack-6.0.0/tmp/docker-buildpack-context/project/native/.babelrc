@@ -1,0 +1,14 @@
+{
+  "presets": ["module:/opt/mendix/modeler/tools/node/node_modules/@react-native/babel-preset"],
+  "plugins": [
+    [
+      "/opt/mendix/modeler/tools/node/node_modules/babel-plugin-inline-import",
+      {
+        "extensions": [".svg"]
+      }
+    ],
+    [
+      "module:/opt/mendix/modeler/tools/node/node_modules/react-native-reanimated/plugin"
+    ]
+  ]
+}
