@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    DOCKER_IMAGE = 'vstram/med_app:1.0'
+    DOCKER_IMAGE = 'nabilwics/med_app:1.0'
     KUBECONFIG = 'C:/Users/ACER/.kube/config'
   
   }
