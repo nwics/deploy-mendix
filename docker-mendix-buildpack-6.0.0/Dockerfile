@@ -4,7 +4,7 @@
 # Author: Mendix Digital Ecosystems, digitalecosystems@mendix.com
 # Version: 5.1.0
 ARG ROOTFS_IMAGE=mendix-rootfs:app
-ARG BUILDER_ROOTFS_IMAGE=mendix/rootfs:builder-ubuntu
+ARG BUILDER_ROOTFS_IMAGE=mendix-rootfs:builder
 
 # Build stage
 FROM ${BUILDER_ROOTFS_IMAGE} AS builder
