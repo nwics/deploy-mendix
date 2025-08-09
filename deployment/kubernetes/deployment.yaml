@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: med_app
+  name: mendix-app
 spec:
- replicas: 1
- selector:
- matchLabels:
- app: mendix
- template:
- metadata:
- labels:
- app: mendix
- spec:
- containers:
- - name: mendix
- image: vstram/med_app
- ports:
- - containerPort: 8080
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mendix-app
+  template:
+    metadata:
+      labels:
+        app: mendix-app
+    spec:
+      containers:          
+      - name: mendix-app
+        image: nabilwics/med_app:1.0  
+        ports:             
+        - containerPort: 8080
