@@ -44,14 +44,14 @@ COPY docker-mendix-buildpack-6.0.0/scripts/startup.py docker-mendix-buildpack-6.
 # 6. Create symlink for java prefs used by CF buildpack
 # 7. Update ownership of /opt/mendix so that the app can run as a non-root user
 # 8. Update permissions of /opt/mendix so that the app can run as a non-root user
-RUN mkdir -p /tmp/buildcache/bust /tmp/cf-deps /var/mendix/build /var/mendix/build/.local &&\
-    chmod +rx /opt/mendix/buildpack/compilation.py /opt/mendix/buildpack/buildpack/stage.py /opt/mendix/build/startup.py &&\
-    cd /opt/mendix/buildpack &&\
-    ./compilation.py /opt/mendix/build /tmp/buildcache /tmp/cf-deps 0 &&\
-    rm -fr /tmp/buildcache /tmp/javasdk /tmp/opt /tmp/downloads /opt/mendix/buildpack/compilation.py /var/mendix &&\
-    ln -s /opt/mendix/.java /opt/mendix/build &&\
-    chown -R ${USER_UID}:0 /opt/mendix &&\
-    chmod -R g=u /opt/mendix
+# RUN mkdir -p /tmp/buildcache/bust /tmp/cf-deps /var/mendix/build /var/mendix/build/.local &&\
+#     chmod +rx /opt/mendix/buildpack/compilation.py /opt/mendix/buildpack/buildpack/stage.py /opt/mendix/build/startup.py &&\
+#     cd /opt/mendix/buildpack &&\
+#     ./compilation.py /opt/mendix/build /tmp/buildcache /tmp/cf-deps 0 &&\
+#     rm -fr /tmp/buildcache /tmp/javasdk /tmp/opt /tmp/downloads /opt/mendix/buildpack/compilation.py /var/mendix &&\
+#     ln -s /opt/mendix/.java /opt/mendix/build &&\
+#     chown -R ${USER_UID}:0 /opt/mendix &&\
+#     chmod -R g=u /opt/mendix
 
 FROM ${ROOTFS_IMAGE}
 LABEL Author="Mendix Digital Ecosystems"
