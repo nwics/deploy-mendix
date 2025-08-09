@@ -10,7 +10,7 @@ ARG BUILDER_ROOTFS_IMAGE=mendix-rootfs:builder
 FROM ${BUILDER_ROOTFS_IMAGE} AS builder
 
 # Build-time variables
-ARG BUILD_PATH=src
+ARG BUILD_PATH=project
 ARG DD_API_KEY
 
 # Exclude the logfilter binary by default
