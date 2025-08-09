@@ -30,7 +30,7 @@ ENV NGINX_CUSTOM_BIN_PATH=/usr/sbin/nginx
 ARG USER_UID=1001
 
 # Copy start scripts
-COPY scripts/startup.py scripts/vcap_application.json /opt/mendix/build/
+COPY docker-mendix-buildpack-6.0.0/scripts/startup.py docker-mendix-buildpack-6.0.0/scripts/vcap_application.json /opt/mendix/build/
 
 # Each comment corresponds to the script line:
 # 1. Create cache directory and directory for dependencies which can be shared
