@@ -9,7 +9,7 @@ pipeline {
     stage('Build Docker Image') {
       steps {
         script {
-          bat 'docker build -t %DOCKER_IMAGE% -f deployment/Dockerfile .'
+          bat 'docker build -t %DOCKER_IMAGE% -f docker-mendix-buildpack-6.0.0/Dockerfile .'
         }
       }
     }
